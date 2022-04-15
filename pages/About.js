@@ -37,7 +37,7 @@ export default function About() {
                         height='250px' width='250px'
                         alt='Picture of me!'
                     />
-                    <Heading m='2'>Hi, I'm Mike!</Heading>
+                    <Heading m='2'>Hi, I{apos}m Mike!</Heading>
                     <Center>
                         <Link href='https://www.linkedin.com/in/mrhenshaw/'>
                             <Linkedin fill={text} height={'50px'} width={'50px'} />
