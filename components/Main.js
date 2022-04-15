@@ -39,7 +39,7 @@ export default function Main() {
             <GridItem gridArea={'2/1 / span 1 / span 1'} alignSelf={'center'}>
                 <motion.div key='myName' layoutId={'name'} initial='hidden' animate='visible' variants={{
                     hidden: { scale: 0.8, opacity: 0 },
-                    visible: { scale: 1, opacity: 1, transition: { delay: 0.3 }}
+                    visible: { scale: 1, opacity: 1, transition: { delay: .75 }}
                 }}>
                     <Heading fontSize={{base: '2xl', lg: '8xl'}} color="white">
                         Mike Henshaw
