@@ -33,7 +33,7 @@ export default function ContactForm({isOpen, onClose}) {
             <Input width='auto' placeholder='Last Name' mb={4}/>
             <FormLabel>Email:</FormLabel>
             <Input placeholder='Email'/>
-            <FormHelperText mb={4}>I won{apos}t share your email, I promise!</FormHelperText>
+            <FormHelperText mb={4}>{"I won't share your email, I promise!"}</FormHelperText>
             <FormLabel>What is the word?</FormLabel>
             <Textarea placeholder='Tell me a little about your self...' mb={4}/>
 
