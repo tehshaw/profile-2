@@ -1,5 +1,5 @@
 import Main from "../components/Main";
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import styles from '../styles/Motion.module.css'
 
 export default function Home() {

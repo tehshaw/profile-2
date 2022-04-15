@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'next/image'
-import { Flex, Grid, Box, GridItem, useDisclosure, background } from "@chakra-ui/react";
+import { Flex, Grid, Box, GridItem, useDisclosure, useColorMode } from "@chakra-ui/react";
 import { motion } from 'framer-motion'
 import styles from '../styles/Motion.module.css'
 import { useRouter } from 'next/router'
@@ -11,6 +11,7 @@ import ContactForm from '../components/ContactForm'
 export default function NavBar() {
   const router = useRouter()
 
+  const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -75,13 +76,13 @@ export default function NavBar() {
               </GridItem>
 
 
-              {/* <GridItem gridArea={' 1 / 5 / span 1 / span 1'} alignSelf='end'>
-              {colorMode === 'dark' ? 
+              <GridItem gridArea={' 1 / 6 / span 1 / span 1'} alignSelf='end'>
+                {colorMode === 'dark' ? 
                     <Image src='/clouds.svg' height='25px' width='25px' alt='Sun behind clouds' onClick={toggleColorMode}/> 
                 : 
                     <Image src='/sun.svg' height='25px' width='25px' alt='Shinning sun' onClick={toggleColorMode}/> 
                 }
-              </GridItem> */}
+              </GridItem>
 
             </Grid>
             

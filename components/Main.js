@@ -1,4 +1,4 @@
-import { Grid, GridItem, Flex, Heading, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Grid, GridItem, Flex, Heading, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react'
@@ -6,8 +6,6 @@ import styles from '../styles/Motion.module.css'
 
 
 export default function Main() {
-
-    const{ isOpen, onToggle } = useDisclosure()
 
     const bg = useColorModeValue('blue.200', 'green.900')
     const text = useColorModeValue('blackAlpha.900', 'whiteAlpha600')

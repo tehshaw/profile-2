@@ -36,7 +36,7 @@ export default function About() {
                         className={styles.photo}
                         height='250px' width='250px'
                         alt='Picture of me!'
-                        />
+                    />
                     <Heading m='2'>Hi, I'm Mike!</Heading>
                     <Center>
                         <Link href='https://www.linkedin.com/in/mrhenshaw/'>
@@ -61,10 +61,13 @@ export default function About() {
                         </Text>
                         <Text p={2}>
                             Previously, I worked within the personal lines
-                            insurance industry. With many years of customer and professional 
-                            interactions, 
+                            insurance industry. I am looking to bring my many years of customer / professional 
+                            interactions to a new career.
                         </Text>
-                        <Text> </Text>
+                        <Text p={2}> 
+                            When I am not writing and learning about all things javascript, I am spending time with my family and rarer still,
+                            reading a book or playing games with friends.
+                        </Text>
                     </Box>
                 </GridItem>
 

@@ -21,6 +21,9 @@
 .name a{
     color: white;
 }
+.name div{
+    color: white;
+}
 
 .nav{
     font-size: 2rem;
@@ -31,6 +34,7 @@
 .nav a{
     color: white;
 }
+
 
 .main{
     background-image: url('../public/max-duzij-qAjJk-un3BI-unsplash.jpg');
