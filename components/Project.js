@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, Box, Center, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Badge, Box, Center, Grid, GridItem, Text, Tooltip } from "@chakra-ui/react";
 import styles from "../styles/Motion.module.css";
 import Image from "next/image";
 import { Link } from "@chakra-ui/react";
@@ -45,19 +45,22 @@ export default function Project({ project, text }) {
             {description}
           </Text>
           <Center p={5}>
-            <Link href={git} alt="github link" m={2} textAlign={"center"}>
-              <Github fill={text} height={"50px"} width={"50px"} />
-              See it!
-            </Link>
-            <Link href={url} alt="live link" m={2} textAlign={"center"}>
-              <Heroku fill={text} height={"50px"} width={"50px"} />
-              Try it!
-            </Link>
+            <Tooltip hasArrow label="View code the on GitHub" bg='blue.300' color='black' placement={'top'}>
+                <Link href={git} alt="github link" m={2} textAlign={"center"} target={'_blank'}>
+                    <Github fill={text} height={"50px"} width={"50px"} />
+                </Link>
+            </Tooltip>
+
+            <Tooltip hasArrow label="See the site on Heroku" bg='blue.300' color='black' placement={'top'}>
+                <Link href={url} alt="live link" m={2} textAlign={"center"} target={'_blank'}>
+                    <Heroku fill={text} height={"50px"} width={"50px"} />
+                </Link>
+            </Tooltip>
           </Center>
         </GridItem>
 
         <GridItem gridColumn={"2 / 4"} alignSelf="center">
-          <Link href={url} alt="live link" m={2} textAlign={"center"}>
+          <Link href={url} alt="live link" m={2} textAlign={"center"} target={'_blank'}>
             <Image
               src={image}
               width={16}

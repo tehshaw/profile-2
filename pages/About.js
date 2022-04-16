@@ -1,11 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
-import { Box, Heading, Grid, GridItem, Link, Center, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Heading, Grid, GridItem, Link, Center, Text, useColorModeValue, Tooltip } from '@chakra-ui/react'
 import styles from '../styles/Motion.module.css'
 import Github from '../components/svg/Github'
 import Linkedin from '../components/svg/Linkedin'
 
 import { motion } from 'framer-motion'
+import Me from '../components/Me'
 
 
 export default function About() {
@@ -31,42 +31,41 @@ export default function About() {
                 borderRadius
                 width='600px'
             >
-                <GridItem gridArea={'1 / 1 / span 1 / span 1'} textAlign='center' m={4}>
-                    <Image src='/1576690805346.jpg' 
-                        className={styles.photo}
-                        height='250px' width='250px'
-                        alt='Picture of me!'
-                    />
+                <GridItem gridArea={'1 / 1 / span 1 / span 1'} textAlign='center' m={4} styles={{position: 'relative'}}>
+                    <Me />
                     <Heading m='2'>{"Hi, I'm Mike!"}</Heading>
                     <Center>
-                        <Link href='https://www.linkedin.com/in/mrhenshaw/'>
-                            <Linkedin fill={text} height={'50px'} width={'50px'} />
-                        </Link>
-                        <Link href='https://github.com/tehshaw' p={2}>
-                            <Github fill={text} height={'50px'} width={'50px'} />
-                        </Link>
-                        <Link href='https://github.com/tehshaw'>
-                            <Heading fontSize={'4xl'} p={2} >CV</Heading>
-                        </Link>
+                        <Tooltip hasArrow label="Let's connect on LinkedIn" bg='blue.300' color='black' placement={'top'}>
+                            <Link href='https://www.linkedin.com/in/mrhenshaw/' target={'_blank'}>
+                                <Linkedin fill={text} height={'50px'} width={'50px'} />
+                            </Link>
+                        </Tooltip>
+
+                        <Tooltip hasArrow label="See my projects on GitHub" bg='blue.300' color='black' placement={'top'}>
+                            <Link href='https://github.com/tehshaw' p={2} target={'_blank'}>
+                                <Github fill={text} height={'50px'} width={'50px'} />
+                            </Link>
+                        </Tooltip>
+
+                        <Tooltip hasArrow label="Check out my resume!" bg='blue.300' color='black' placement={'top'}>
+                            <Link href='https://github.com/tehshaw' target={'_blank'}>
+                                <Heading fontSize={'4xl'} p={2} >CV</Heading>
+                            </Link>
+                        </Tooltip>
                     </Center>
                 </GridItem>
                 <GridItem gridArea={'1 / 2 / span 1 / span 1'}>
                     <Box width={'500px'}>
-                        <Heading p={2}>About Me</Heading>
+                        <Heading fontSize={'4xl'} p={2}>About Me.</Heading>
                         <Text p={2}>
-                            I am a recent graduate of the University of Central Flordia 
-                            coding bootcamp. I am pursueing a role as a full-stack developer
-                            to utilize my growing skills and knowledge. Currently an intern with develop.This.org helping
-                            other bootcamp graduates prepare for their role as developer. 
+                        {"After almost 10 years in Personal Lines Insurance help desk and data analytics, I took a leap and decided to pursue my passion of becoming a Software Engineer- Full Stack. Now, a recent graduate of the University of Central Florida's Coding Bootcamp, I have the certification to enforce the knowledge I've gained after years in workforce. My education didn't start of stop there- I have since mastered external courses in continuing education for coding in software development, such as “Java Programming Masterclass for Software Developers” and “JavaScript Algorithms and Data Structures Master Class”, along with continuing to learn new platforms, languages and gaining additional certifications through sites like Hacker Rank."}
                         </Text>
                         <Text p={2}>
-                            Previously, I worked within the personal lines
-                            insurance industry. I am looking to bring my many years of customer / professional 
-                            interactions to a new career.
+                        {"Most recently I've been working as a Graduate Tutor for a new start-up, Develop.This.org. Develop This, LLC provides support to a network of post bootcamp grads and aspiring junior developers with career services, continuing education, private tutoring, and staffing resources. I've been lucky to be a part of this start-up from their beginning roots providing additional assistance and expertise in working with code to a community of up-and-coming engineers."}
                         </Text>
                         <Text p={2}> 
-                            When I am not writing and learning about all things javascript, I am spending time with my family and rarer still,
-                            reading a book or playing games with friends.
+                        {"When I'm not spending my time tutoring,  writing and learning about all things coding I'm spending time with my kids, catching up with the latest Star Wars or Marvel universe continuation, or playing Farming Simulator (which I'm pretty sure counts as a form of meditation)."}
+                        
                         </Text>
                     </Box>
                 </GridItem>

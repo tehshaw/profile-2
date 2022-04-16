@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <ChakraProvider theme={customTheme}>
         <CSSReset />
-        <AnimatePresence initial={false}>
+        <AnimatePresence initial={true}>
             <NavBar />
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
