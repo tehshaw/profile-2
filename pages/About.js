@@ -48,7 +48,7 @@ export default function About() {
                         </Tooltip>
 
                         <Tooltip hasArrow label="Check out my resume!" bg='blue.300' color='black' placement={'top'}>
-                            <Link href='https://github.com/tehshaw' target={'_blank'}>
+                            <Link href='' target={'_blank'}>
                                 <Heading fontSize={'4xl'} p={2} >CV</Heading>
                             </Link>
                         </Tooltip>
