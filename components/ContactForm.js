@@ -13,9 +13,14 @@ import {
   FormLabel,
   Textarea,
   FormHelperText,
+  useColorModeValue,
+  useColorMode
 } from "@chakra-ui/react";
 
 export default function ContactForm({ isOpen, onClose }) {
+
+  const bg = useColorModeValue('gray.400', 'purple.800')
+
   const [waiting, setWaiting] = useState(true);
 
   async function handleOnSubmit(event) {
@@ -43,12 +48,12 @@ export default function ContactForm({ isOpen, onClose }) {
       isCentered
     >
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent  bg={bg}>
         <ModalHeader>Send a message to Mike!</ModalHeader>
         <ModalCloseButton />
 
         {waiting ? (
-          <ModalBody>
+          <ModalBody >
             <form method="post" onSubmit={handleOnSubmit}>
               <FormControl isRequired isInvalid={false}>
                 <FormLabel>First Name:</FormLabel>
@@ -57,6 +62,8 @@ export default function ContactForm({ isOpen, onClose }) {
                   width="auto"
                   placeholder="First Name"
                   mb={4}
+                  bg={'white'}
+                  color={'black'}
                 />
               </FormControl>
 
@@ -67,12 +74,14 @@ export default function ContactForm({ isOpen, onClose }) {
                   width="auto"
                   placeholder="Last Name"
                   mb={4}
+                  bg={'white'}
+                  color={'black'}
                 />
               </FormControl>
 
               <FormControl isRequired isInvalid={false}>
                 <FormLabel>Email:</FormLabel>
-                <Input name="email" placeholder="Email" />
+                <Input name="email" placeholder="Email" bg={'white'} color={'black'} />
                 <FormHelperText mb={4}>
                   {"I won't share your email, I promise!"}
                 </FormHelperText>
@@ -82,16 +91,16 @@ export default function ContactForm({ isOpen, onClose }) {
                 <FormLabel>What is the word?</FormLabel>
                 <Textarea
                   name="message"
-                  placeholder="Tell me a little about your self..."
                   mb={4}
+                  bg={'white'} color={'black'}
                 />
               </FormControl>
 
               <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={handleOnSubmit}>
+                <Button variant="solid" colorScheme={'linkedin'} mr={3} onClick={handleOnSubmit}>
                   Send to Mike
                 </Button>
-                <Button variant="ghost" onClick={onClose}>
+                <Button variant="outline" colorScheme={'linkedin'} onClick={onClose}>
                   Maybe Later
                 </Button>
               </ModalFooter>
