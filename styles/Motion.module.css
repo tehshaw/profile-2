@@ -62,8 +62,8 @@
 
 .photo{
     border-radius: 50%;
-    /* box-shadow: rgb(14, 82, 241) 0px 2px 40px -4px;  */
-    /* filter: drop-shadow(0 0 40px rgb(14, 82, 241)) */
+    /* box-shadow: rgb(0, 0, 0) 0px 2px 40px -4px;  */
+    /* filter: drop-shadow(0 0 10px rgb(0, 0, 0)) */
 
 }
 

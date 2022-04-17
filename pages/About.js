@@ -10,8 +10,11 @@ import Me from '../components/Me'
 
 export default function About() {
     
-    const bg = useColorModeValue('orange.200', 'blue.800')
-    const text = useColorModeValue('rgba(0, 0, 0, 0.92)', 'rgba(255, 255, 255, 0.48)')
+    const grad = useColorModeValue(
+        'linear(to-t, #0099E0, #5F617A)', 
+        'linear(to-b, gray.800 25%, #27036E 60%, #3905A1) '
+    )
+    const text = useColorModeValue('rgba(0, 0, 0, 0.92)', 'rgba(255, 255, 255, 0.6)')
 
 
   return (
@@ -21,7 +24,7 @@ export default function About() {
       animate={{ x: 0, transition: { delay: .5, duration: .75}}} 
       exit={{x: '-100%', transition:{ delay: .5, type: 'just'}}}
     >
-        <Box className={styles.mainSlide} color={text} bg={bg} height={'93vh'} minW={'100%'} p={4}>
+        <Box className={styles.mainSlide} color={text} bgGradient={grad} height={'93vh'} minW={'100%'} p={4}>
        
             <Grid 
                 templateRows={'repeat (1, 50vh)'}

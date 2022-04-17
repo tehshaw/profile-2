@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import styles from "../styles/Motion.module.css";
 import Project from "../components/Project";
 import { projects } from "../data/projects";
@@ -10,10 +10,13 @@ import { motion } from "framer-motion";
 export default function Code() {
   const [current, setCurrent] = useState(0);
 
-  const bg = useColorModeValue("pink.200", "green.800");
+  const grad = useColorModeValue(
+    'linear(to-br, gray.500, orange.200)', 
+    'linear(to-tr, blue.700 0%, purple.700 30%, orange.800)'
+  )
   const text = useColorModeValue(
     "rgba(0, 0, 0, 0.92)",
-    "rgba(255, 255, 255, 0.48)"
+    "rgba(255, 255, 255, 0.6)"
   );
 
   function nextProject(dir) {
@@ -39,7 +42,7 @@ export default function Code() {
       animate={{ x: 0, transition: { delay: 0.5, duration: 0.75 } }}
       exit={{ x: "100%", transition: { delay: 0.5, type: "just" } }}
     >
-      <Box className={styles.mainSlide} bg={bg} p={10}>
+      <Box className={styles.mainSlide} bgGradient={grad} color={text} p={10}>
 
         <Box onClick={() => nextProject("left")}>
           <motion.div

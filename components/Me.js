@@ -10,7 +10,7 @@ export default function Me() {
     
     <Popover placement='left' arrowShadowColor={'white'} arrowSize={'10'} arrowBackground={'white'} >
         <PopoverTrigger>
-            <Box>
+            <Box >
                 <Image src='/me.jpg' 
                     className={styles.photo}
                     height='250px' width='250px'

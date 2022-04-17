@@ -23,6 +23,8 @@ export default function ContactForm({ isOpen, onClose }) {
 
   const [waiting, setWaiting] = useState(true);
 
+  
+
   async function handleOnSubmit(event) {
     event.preventDefault();
     const data = {};
