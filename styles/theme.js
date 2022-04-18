@@ -18,6 +18,7 @@ const customTheme = extendTheme({
       }),
     },
     fonts: {
+      // navbar: 'Bebas Neue, sans serif'
     //   heading: 'league mono narrow, sans serif',
     }
   })

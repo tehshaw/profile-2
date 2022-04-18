@@ -15,9 +15,11 @@ export default function Main() {
 
     <Flex flexWrap={'wrap'} justifyContent={'center'} alignItems={'center'} height={'93vh'}>
 
-        <Grid templateRows={{base: 'repeat (5, 100px)', lg: '100px 100px 125px'}} templateColumns={{base: '1fr', lg: 'repeat (1, 1fr'}} alignContent={'center'} gap={5}>
+        <Grid  templateColumns={{base: '1fr', lg: 'repeat (1, 1fr'}} alignContent={'center'} gap={8}>
 
-            <GridItem gridArea={'1/1 / span 1 / span 1'} alignSelf={'center'} justifySelf='center'>
+            <GridItem gridArea={'1/1 / span 1 / span 1'} alignSelf={'center'} justifySelf='center'
+                fontFamily={'Rajdhani'} fontWeight={'400'}
+            >
                 <motion.div key='codeTitle' className={styles.nav}
                     whileHover={{
                         position: 'relative',
@@ -34,12 +36,12 @@ export default function Main() {
                 </motion.div>
             </GridItem>
 
-            <GridItem gridArea={'2/1 / span 1 / span 1'} alignSelf={'center'}>
+            <GridItem gridArea={'1/2 / span 1 / span 1'} alignSelf={'center'}>
                 <motion.div key='myName' layoutId={'name'} initial='hidden' animate='visible' variants={{
                     hidden: { scale: 0.8, opacity: 0 },
                     visible: { scale: 1, opacity: 1, transition: { delay: .75 }}
                 }}>
-                    <Heading fontSize={{base: '2xl', lg: '8xl'}} color="white">
+                    <Heading fontSize={{base: '2xl', lg: '8xl'}} fontFamily={'Rajdhani'} fontWeight={'500'} color="white">
                         Mike Henshaw
                     </Heading>
                 </motion.div>
@@ -47,7 +49,9 @@ export default function Main() {
 
 
 
-            <GridItem gridArea={'3/1 / span 1 / span 1'} alignSelf={'center'} justifySelf='center'>
+            <GridItem gridArea={'1/3 / span 1 / span 1'} alignSelf={'center'} justifySelf='center'
+                fontFamily={'Rajdhani'} fontWeight={'400'}
+            >
                 <motion.div key='personTitle' className={styles.nav}
                     whileHover={{
                         position: 'relative',

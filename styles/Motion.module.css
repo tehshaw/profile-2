@@ -1,5 +1,5 @@
 .mainSlide {
-    min-height: 93vh;
+    height: 90%;
     width: 100%;
     flex: 1;
     display: flex;
@@ -15,12 +15,19 @@
     align-items: center;
 }
 
+#me{
+    font-family: 'Bebas Neue', cursive;
+}
+
 .name{
     font-size: x-large;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
 }
 .name a{
     color: white;
 }
+
 .name div{
     color: white;
 }

@@ -18,7 +18,7 @@ export default function NavBar() {
   <>
     <Flex justifyContent={'space-between'} 
           alignItems={'center'} 
-          p='4' bg='black' height={'7vh'}
+          p='4' bg='black' height={'60px'}
           pos='relative'>
           
 
@@ -45,7 +45,7 @@ export default function NavBar() {
                 </motion.div>
               </GridItem>
               
-              <GridItem gridArea={' 1 / 2 / span 1 / span 1'} alignSelf='end'>
+              <GridItem gridArea={' 1 / 2 / span 1 / span 1'} alignSelf='center'>
                 <Image src='/vpipes.svg' height='20px' width='20px' alt='pipes' />
               </GridItem>
 
@@ -56,11 +56,11 @@ export default function NavBar() {
                     scale: 1.2,
                     transition: { type: 'just'}
                   }}>
-                  <Link href='/About' passHref>The Person</Link>
+                  <Link href='/About' passHref >The Person</Link>
                 </motion.div>              
               </GridItem>
 
-              <GridItem gridArea={' 1 / 4 / span 1 / span 1'} alignSelf='end'>
+              <GridItem gridArea={' 1 / 4 / span 1 / span 1'} alignSelf='center'>
                 <Image src='/vpipes.svg' height='20px' width='20px' alt='pipes' />
               </GridItem>
 
@@ -76,7 +76,7 @@ export default function NavBar() {
               </GridItem>
 
 
-              <GridItem gridArea={' 1 / 6 / span 1 / span 1'} alignSelf='end'>
+              <GridItem gridArea={' 1 / 6 / span 1 / span 1'} alignSelf='center'>
                 {colorMode === 'dark' ? 
                     <Image src='/clouds.svg' height='25px' width='25px' alt='Sun behind clouds' onClick={toggleColorMode}/> 
                 : 

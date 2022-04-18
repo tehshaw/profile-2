@@ -11,8 +11,8 @@ import Me from '../components/Me'
 export default function About() {
     
     const grad = useColorModeValue(
-        'linear(to-t, #0099E0, #5F617A)', 
-        'linear(to-b, gray.800 25%, #27036E 60%, #3905A1) '
+        'linear(to-t, #0099E0, gray.500)', 
+        'linear(to-b, gray.800, purple.700) '
     )
     const text = useColorModeValue('rgba(0, 0, 0, 0.92)', 'rgba(255, 255, 255, 0.6)')
 
@@ -24,7 +24,7 @@ export default function About() {
       animate={{ x: 0, transition: { delay: .5, duration: .75}}} 
       exit={{x: '-100%', transition:{ delay: .5, type: 'just'}}}
     >
-        <Box className={styles.mainSlide} color={text} bgGradient={grad} height={'93vh'} minW={'100%'} p={4}>
+        <Box className={styles.mainSlide} color={text} bgGradient={grad} height={'93%'} minW={'100%'} p={4}>
        
             <Grid 
                 templateRows={'repeat (1, 50vh)'}
@@ -34,9 +34,9 @@ export default function About() {
                 borderRadius
                 width='600px'
             >
-                <GridItem gridArea={'1 / 1 / span 1 / span 1'} textAlign='center' m={4} styles={{position: 'relative'}}>
+                <GridItem gridArea={'1 / 1 / span 1 / span 1'} textAlign='center' m={4}>
                     <Me />
-                    <Heading m='2'>{"Hi, I'm Mike!"}</Heading>
+                    <Heading fontFamily={'bebas neue'} m='2'>{"Hi, I'm Mike!"}</Heading>
                     <Center>
                         <Tooltip hasArrow label="Let's connect on LinkedIn" bg='blue.300' color='black' placement={'top'}>
                             <Link href='https://www.linkedin.com/in/mrhenshaw/' target={'_blank'}>
@@ -59,16 +59,15 @@ export default function About() {
                 </GridItem>
                 <GridItem gridArea={'1 / 2 / span 1 / span 1'}>
                     <Box width={'500px'}>
-                        <Heading fontSize={'4xl'} p={2}>About Me.</Heading>
-                        <Text p={2}>
+                        <Heading fontSize={'4xl'} fontFamily={'bebas neue'} p={2}>About Me.</Heading>
+                        <Text p={2} fontFamily={'noto sans'}>
                         {"After almost 10 years in Personal Lines Insurance help desk and data analytics, I took a leap and decided to pursue my passion of becoming a Software Engineer- Full Stack. Now, a recent graduate of the University of Central Florida's Coding Bootcamp, I have the certification to enforce the knowledge I've gained after years in workforce. My education didn't start of stop there- I have since mastered external courses in continuing education for coding in software development, such as “Java Programming Masterclass for Software Developers” and “JavaScript Algorithms and Data Structures Master Class”, along with continuing to learn new platforms, languages and gaining additional certifications through sites like Hacker Rank."}
                         </Text>
-                        <Text p={2}>
+                        <Text p={2} fontFamily={'noto sans'}>
                         {"Most recently I've been working as a Graduate Tutor for a new start-up, Develop.This.org. Develop This, LLC provides support to a network of post bootcamp grads and aspiring junior developers with career services, continuing education, private tutoring, and staffing resources. I've been lucky to be a part of this start-up from their beginning roots providing additional assistance and expertise in working with code to a community of up-and-coming engineers."}
                         </Text>
-                        <Text p={2}> 
+                        <Text p={2} fontFamily={'noto sans'}> 
                         {"When I'm not spending my time tutoring,  writing and learning about all things coding I'm spending time with my kids, catching up with the latest Star Wars or Marvel universe continuation, or playing Farming Simulator (which I'm pretty sure counts as a form of meditation)."}
-                        
                         </Text>
                     </Box>
                 </GridItem>

@@ -1,12 +1,12 @@
 import React from "react";
-import { Badge, Box, Center, Grid, GridItem, Text, Tooltip } from "@chakra-ui/react";
-import styles from "../styles/Motion.module.css";
 import Image from "next/image";
-import { Link } from "@chakra-ui/react";
-import Heroku from "./svg/Heroku";
+import { Badge, Box, Center, Grid, GridItem, Text, Tooltip, Link } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
+import styles from "../styles/Motion.module.css";
 import Github from "./svg/Github";
+import Heroku from "./svg/Heroku";
+
 
 export default function Project({ project, text }) {
   const { name, description, image, featured, url, git } = project;
@@ -18,11 +18,11 @@ export default function Project({ project, text }) {
       animate={{ opacity: 1, transition: { duration: 0.75 } }}
       exit={{ opacity: 0, transition: { duration: 0.75 } }}
     >
-      <Box fontWeight="semibold" fontSize="4xl" as="h1">
+      <Box fontWeight="semibold" fontFamily={'bebas neue'} fontSize="4xl" as="h1">
         {name}
 
         {featured && (
-          <Badge ml={2} borderRadius="full" bg={"teal"}>
+          <Badge ml={2} fontFamily={'arial'} borderRadius="full" bg={"teal"}>
             {featured}
           </Badge>
         )}
@@ -41,7 +41,7 @@ export default function Project({ project, text }) {
           justifyContent="center"
           alignItems={"center"}
         >
-          <Text textAlign={"center"} p={2}>
+          <Text textAlign={"center"} fontFamily={'noto sans'} p={2}>
             {description}
           </Text>
           <Center p={5}>
