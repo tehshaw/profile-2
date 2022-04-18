@@ -57,7 +57,7 @@ export default function Code() {
           className={styles.center}
           width="75vw"
           height="75vh"
-          // border="solid black"
+          border="solid black"
           borderRadius="10px"
           m={5}
         >

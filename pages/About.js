@@ -24,15 +24,11 @@ export default function About() {
       animate={{ x: 0, transition: { delay: .5, duration: .75}}} 
       exit={{x: '-100%', transition:{ delay: .5, type: 'just'}}}
     >
-        <Box className={styles.mainSlide} color={text} bgGradient={grad} height={'93%'} minW={'100%'} p={4}>
+        <Box className={styles.mainSlide} color={text} bgGradient={grad} p={4}>
        
             <Grid 
-                templateRows={'repeat (1, 50vh)'}
-                templateColumns={'repeat ('}
-                border={'2px'}
                 gap={4}
-                borderRadius
-                width='600px'
+                // width={'75%'}
             >
                 <GridItem gridArea={'1 / 1 / span 1 / span 1'} textAlign='center' m={4}>
                     <Me />
