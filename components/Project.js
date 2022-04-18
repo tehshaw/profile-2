@@ -67,6 +67,8 @@ export default function Project({ project, text }) {
               height={9}
               layout="responsive"
               alt={name}
+              placeholder='blur'
+              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPUCOg8AgADcAHHGP6wmQAAAABJRU5ErkJggg=='
             />
           </Link>
         </GridItem>

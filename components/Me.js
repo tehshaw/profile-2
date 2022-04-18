@@ -15,7 +15,7 @@ export default function Me() {
                     className={styles.photo}
                     height='250px' width='250px'
                     alt='Picture of me!'
-                    placeholder='blue'
+                    placeholder='blur'
                     blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPUCOg8AgADcAHHGP6wmQAAAABJRU5ErkJggg=='
                 />
             </Box>

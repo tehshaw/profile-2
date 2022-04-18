@@ -14,7 +14,7 @@ export default class Document extends NextDocument {
           <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet" />         
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <ColorModeScript initialColorMode={'light'} />
           <Main />
           <NextScript />
         </body>
