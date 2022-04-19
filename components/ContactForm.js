@@ -111,7 +111,7 @@ export default function ContactForm({ isOpen, onClose }) {
         ) : (
           <ModalBody>
             Your message has been sent. Look for confirmation to be sent to the
-            email provivded! Thank you!
+            email provided! Thank you!
             <ModalFooter>
               <Button colorScheme="blue" p={2} onClick={onClose}>
                 Awesome!
