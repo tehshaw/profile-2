@@ -15,10 +15,6 @@
     align-items: center;
 }
 
-#me{
-    font-family: 'Bebas Neue', cursive;
-}
-
 .name{
     font-size: x-large;
     font-size: 30px;
@@ -35,7 +31,7 @@
 .nav{
     font-size: 2rem;
     font-style: italic;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .nav a{

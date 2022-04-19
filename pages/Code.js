@@ -11,7 +11,7 @@ export default function Code() {
   const [current, setCurrent] = useState(0);
 
   const grad = useColorModeValue(
-    "linear(to-br, gray.500, orange.200)",
+    "linear(to-tl, gray.400 5%, #0099E0)",
     "linear(to-tr, blue.700 0%, purple.700 30%, orange.800)"
   );
   const text = useColorModeValue(
