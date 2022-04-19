@@ -1,6 +1,6 @@
 import { Divider, Grid, GridItem, Heading, Tooltip, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
-import { skills } from '../../../data/skills'
+import { skills } from '../data/skills'
 
 export default function Skills() {
 

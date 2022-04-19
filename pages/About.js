@@ -6,7 +6,7 @@ import Linkedin from '../components/svg/Linkedin'
 
 import { motion } from 'framer-motion'
 import Me from '../components/Me'
-import Skills from '../components/svg/skills/Skills'
+import Skills from '../components/Skills'
 
 
 export default function About() {
