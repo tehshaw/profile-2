@@ -20,17 +20,17 @@ export default function About() {
 
   return (
     <motion.div 
-      key='code' 
+      key='about' 
       initial={{ x: '-100%'}} 
       animate={{ x: 0, transition: { delay: .5, duration: .75}}} 
-      exit={{x: '-100%', transition:{ delay: .5, type: 'just'}}}
+      exit={{x: '100%', transition:{ delay: .5, type: 'just'}}}
     >
         <Box className={styles.mainSlide} color={text} bgGradient={grad}>
        
             <Grid 
                 gap={4}
             >
-                <GridItem gridArea={'1 / 1 / 1 / 1'} textAlign='center' m={4} justifyItems={'center'}>
+                <GridItem gridArea={'1 / 1 / 1 / 1'} textAlign='center' m={4} justifySelf={{base: 'center', lg: 'right'}}>
                     <Me />
                     <Heading fontFamily={'bebas neue'} m='2'>{"Hi, I'm Mike!"}</Heading>
                     <Center p={4}>
@@ -53,11 +53,13 @@ export default function About() {
                         </Tooltip>
                     </Center>
                 </GridItem>
+
                 <GridItem gridArea={{
                     md: '2 / 1 / 2 / 3',
                     lg: '1 / 2 / 1 / 2'
                 }}
                 m={4}
+                justifySelf={'center'}
                 >
                     <Box width={{md:'100%', lg:'500px'}} fontFamily={'noto sans'}>
                         <Heading fontSize={'4xl'} fontFamily={'bebas neue'} p={2}>About Me.</Heading>
@@ -90,9 +92,10 @@ export default function About() {
                 <GridItem gridArea={{
                     md: '1 / 2 / 1 / 2',
                     lg: '1 / 3 / 1 / 3'
-                }} m={4} width='250px' justifySelf={'center'}>
+                    }} m={4} width='250px' justifySelf={{base: 'center', lg: 'left'}}>
                     <Skills />
                 </GridItem>
+
             </Grid>
         </Box>
     </motion.div>  )

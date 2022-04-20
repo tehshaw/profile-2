@@ -37,14 +37,15 @@ export default function Code() {
 
   return (
     <motion.div
+      key='code'
       className={styles.max}
-      initial={{ x: "100%"}}
+      initial={{ x: "-100%"}}
       animate={{ x: 0, transition: { delay: 0.5, duration: 0.75 } }}
       exit={{ x: "100%", transition: { delay: 0.5, type: "just" } }}
     >
       <Grid className={styles.mainSlide} bgGradient={grad} color={text} p={{base: 0, md: 10}} >
     
-        <GridItem onClick={() => nextProject("left")} gridRow={{base: '2 / 3', md: '1 / 2'}} gridColumn={{base: '1 / 2'}}>
+        <GridItem key='left' onClick={() => nextProject("left")} gridRow={{base: '2 / 3', md: '1 / 2'}} gridColumn={{base: '1 / 2'}} alignSelf={'center'}>
           <motion.div
             whileHover={{
               scale: .9,
@@ -56,13 +57,14 @@ export default function Code() {
 
 
         <GridItem
+          key={'ProjectDetails'}
           gridColumn={{base: '1/ 3', md: '2 / 3'}}
+          // gridRow={{base: '1 / 3', md: '1 / 2'}}
           className={styles.center}
           width={{md: "75vw"}}
-          height={{base: '100%',  lg: "75vh"}}
           border={{md:"solid black"}}
           borderRadius="10px"
-          m={5}
+          m={{base: 0, md: 5}}
         >
           {projects.map((project, index) => {
             return (
@@ -73,7 +75,8 @@ export default function Code() {
           })}
         </GridItem>
    
-          <GridItem onClick={() => nextProject("right")} gridRow={{base: '2 / 3', md: '1 / 2'}} gridColumn={{base: '2 / 3', md: '3 / 4'}} justifySelf={'right'}>
+          <GridItem key='right' onClick={() => nextProject("right")} gridRow={{base: '2 / 3', md: '1 / 2'}} gridColumn={{base: '2 / 3', md: '3 / 4'}} 
+            justifySelf={{base: 'right', md: 'left'}} alignSelf={'center'}>
             <motion.div
               whileHover={{
                 scale: .9,

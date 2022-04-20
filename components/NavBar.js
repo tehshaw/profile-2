@@ -33,9 +33,7 @@ export default function NavBar() {
     <Flex justifyContent={'space-between'}
           alignItems={'center'} 
           p={{base: 3}} bg='black' height={'min-height'}
-          pos={{base: 'sticky', md:'relative'}}
-          top='0'
-          zIndex={'1'}
+          className={width > 750 ? styles.full : styles.min}
     >
           
 
