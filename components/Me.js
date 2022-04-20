@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, Box  } from '@chakra-ui/react'
+import { Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverHeader, PopoverBody, Box  } from '@chakra-ui/react'
 import styles from '../styles/Motion.module.css'
 
 
@@ -8,7 +8,7 @@ import styles from '../styles/Motion.module.css'
 export default function Me() {
   return (
     
-    <Popover placement='left' arrowShadowColor={'white'} arrowSize={'10'} arrowBackground={'white'} >
+    <Popover placement='bottom' arrowShadowColor={'white'} arrowSize={'10'} arrowBackground={'white'} >
         <PopoverTrigger>
             <Box >
                 <Image src='/me.jpg' 

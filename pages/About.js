@@ -29,9 +29,8 @@ export default function About() {
        
             <Grid 
                 gap={4}
-                // width={'75%'}
             >
-                <GridItem gridArea={'1 / 1 / span 1 / span 1'} textAlign='center' m={4} justifyItems={'center'}>
+                <GridItem gridArea={'1 / 1 / 1 / 1'} textAlign='center' m={4} justifyItems={'center'}>
                     <Me />
                     <Heading fontFamily={'bebas neue'} m='2'>{"Hi, I'm Mike!"}</Heading>
                     <Center p={4}>
@@ -54,8 +53,13 @@ export default function About() {
                         </Tooltip>
                     </Center>
                 </GridItem>
-                <GridItem gridArea={'1 / 2 / span 1 / span 1'}>
-                    <Box width={'500px'} fontFamily={'noto sans'}>
+                <GridItem gridArea={{
+                    md: '2 / 1 / 2 / 3',
+                    lg: '1 / 2 / 1 / 2'
+                }}
+                m={4}
+                >
+                    <Box width={{md:'100%', lg:'500px'}} fontFamily={'noto sans'}>
                         <Heading fontSize={'4xl'} fontFamily={'bebas neue'} p={2}>About Me.</Heading>
                         <Text p={2} >{`
                             After almost 10 years in Personal Lines Insurance help desk and data analytics, 
@@ -83,7 +87,10 @@ export default function About() {
                     </Box>
                 </GridItem>
                 
-                <GridItem gridColumn={'3 / 4'} m={4}>
+                <GridItem gridArea={{
+                    md: '1 / 2 / 1 / 2',
+                    lg: '1 / 3 / 1 / 3'
+                }} m={4} width='250px' justifySelf={'center'}>
                     <Skills />
                 </GridItem>
             </Grid>

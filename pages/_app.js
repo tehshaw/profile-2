@@ -5,13 +5,14 @@ import customTheme from '../styles/theme'
 import { AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }) {
+
   return (
     <ChakraProvider theme={customTheme}>
         <CSSReset />
         <AnimatePresence initial={true}>
             <NavBar />
             <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
+        </AnimatePresence>
     </ChakraProvider>
   )
 }

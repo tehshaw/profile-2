@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import styles from "../styles/Motion.module.css";
 import Project from "../components/Project";
 import { projects } from "../data/projects";
@@ -37,27 +37,30 @@ export default function Code() {
 
   return (
     <motion.div
-      key="code"
-      initial={{ x: "100%" }}
+      className={styles.max}
+      initial={{ x: "100%"}}
       animate={{ x: 0, transition: { delay: 0.5, duration: 0.75 } }}
       exit={{ x: "100%", transition: { delay: 0.5, type: "just" } }}
     >
-      <Box className={styles.mainSlide} bgGradient={grad} color={text} p={10}>
-        <Box onClick={() => nextProject("left")}>
+      <Grid className={styles.mainSlide} bgGradient={grad} color={text} p={{base: 0, md: 10}} >
+    
+        <GridItem onClick={() => nextProject("left")} gridRow={{base: '2 / 3', md: '1 / 2'}} gridColumn={{base: '1 / 2'}}>
           <motion.div
             whileHover={{
-              scale: 1.2,
+              scale: .9,
             }}
           >
-            <LeftArrow height="100px" width="100px" fill={text} />
+            <LeftArrow height="75px" width="75px" fill={text} />
           </motion.div>
-        </Box>
+        </GridItem>
 
-        <Box
+
+        <GridItem
+          gridColumn={{base: '1/ 3', md: '2 / 3'}}
           className={styles.center}
-          width="75vw"
-          height="75vh"
-          border="solid black"
+          width={{md: "75vw"}}
+          height={{base: '100%',  lg: "75vh"}}
+          border={{md:"solid black"}}
           borderRadius="10px"
           m={5}
         >
@@ -68,18 +71,19 @@ export default function Code() {
               </>
             );
           })}
-        </Box>
+        </GridItem>
+   
+          <GridItem onClick={() => nextProject("right")} gridRow={{base: '2 / 3', md: '1 / 2'}} gridColumn={{base: '2 / 3', md: '3 / 4'}} justifySelf={'right'}>
+            <motion.div
+              whileHover={{
+                scale: .9,
+              }}
+            >
+              <RightArrow height="75px" width="75px" fill={text} />
+            </motion.div>
+          </GridItem>
 
-        <Box onClick={() => nextProject("right")}>
-          <motion.div
-            whileHover={{
-              scale: 1.2,
-            }}
-          >
-            <RightArrow height="100px" width="100px" fill={text} />
-          </motion.div>
-        </Box>
-      </Box>
+      </Grid>
     </motion.div>
   );
 }

@@ -10,13 +10,13 @@ export default function Skills() {
   );
   
   return (
-    <Grid templateColumns={'repeat(3, 1fr)'} justifyItems={'center'} p={2} gap={4}>
+    <Grid justifyItems={'center'} p={2} gap={4}>
 
       <GridItem gridColumn={('1 / 4')}>
         <Heading fontFamily={'noto sans'}>Skills</Heading>
-      <Divider />
-
+        <Divider />
       </GridItem>
+      
       {skills.map( skill => {
         return (
           <>
