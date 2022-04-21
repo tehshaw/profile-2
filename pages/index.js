@@ -7,7 +7,7 @@ export default function Home() {
       <motion.div key='main' className={styles.main} 
         initial={{ opacity: 1}} 
         animate={{ opacity: 1}}
-        exit={{opacity: 0, transition: {duration: .25}}}
+        exit={{opacity: 0, transition: {delay: .5, duration: .25}}}
       >
 
         <Main />

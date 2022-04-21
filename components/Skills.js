@@ -10,18 +10,19 @@ export default function Skills() {
   );
   
   return (
+    <>
     <Grid justifyItems={'center'} p={2} gap={4}>
 
-      <GridItem gridColumn={('1 / 4')}>
+      <GridItem key={'skills'} gridColumn={('1 / 4')}>
         <Heading fontFamily={'noto sans'}>Skills</Heading>
         <Divider />
       </GridItem>
       
-      {skills.map( skill => {
+      {skills.map( (skill, index) => {
         return (
           <>
-            <GridItem>
-              <Tooltip hasArrow label={skill.label} bg='blue.300' color='black' placement={'top'}>
+            <GridItem key={index}>
+              <Tooltip key={skill.label} hasArrow label={skill.label} bg='blue.300' color='black' placement={'top'}>
                 <svg stroke="currentColor" fill={text} strokeWidth="0" role="img" viewBox={skill.viewBox} height='50px' width='50px' xmlns="http://www.w3.org/2000/svg">
                   {skill.path}
                 </svg>
@@ -32,5 +33,6 @@ export default function Skills() {
       })}
     
     </Grid>
+    </>
     )
 }

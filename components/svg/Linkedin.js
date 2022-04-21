@@ -1,7 +1,9 @@
+import { Tooltip } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Linkedin({fill, height, width}) {
+export default function Linkedin({fill, height, width}, ref) {
   return (
+
     <svg 
         stroke="currentColor" 
         fill={fill}

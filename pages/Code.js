@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
+import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import styles from "../styles/Motion.module.css";
 import Project from "../components/Project";
 import { projects } from "../data/projects";
@@ -69,7 +69,7 @@ export default function Code() {
           {projects.map((project, index) => {
             return (
               <>
-                {index === current && <Project project={project} text={text} />}
+                {index === current && <Project key={index} project={project} text={text} />}
               </>
             );
           })}

@@ -54,9 +54,6 @@
 
 .photo{
     border-radius: 50%;
-    /* box-shadow: rgb(0, 0, 0) 0px 2px 40px -4px;  */
-    /* filter: drop-shadow(0 0 10px rgb(0, 0, 0)) */
-
 }
 
 .project{
@@ -67,6 +64,7 @@
     display: flex;
     flex: 1;
     width: 100%;
+    min-height: 90vh;
 }
 
 .mainSlide{

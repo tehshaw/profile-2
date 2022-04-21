@@ -47,6 +47,7 @@ export default function Small({onOpen, colorMode, toggleColorMode}) {
           fontFamily={'bebas neue'}
           fontSize={'23px'}
           minW={'auto'}
+          
         >
             <MenuItem justifyContent={'center'} width='150px'>
               <Link href='/Code' passHref>The Code</Link>

@@ -18,6 +18,7 @@ export default function NavBar() {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    setWidth(window.innerWidth)
     const handleResizeWindow = () => {
       setWidth(window.innerWidth);
     }
@@ -33,7 +34,7 @@ export default function NavBar() {
     <Flex justifyContent={'space-between'}
           alignItems={'center'} 
           p={{base: 3}} bg='black' height={'min-height'}
-          className={width > 750 ? styles.full : styles.min}
+          // className={width > 750 ? styles.full : styles.min}
     >
           
 
@@ -42,7 +43,7 @@ export default function NavBar() {
         <motion.h1 key='navName' className={styles.name} layoutId={'name'}>
           <Link href='/' passHref>Mike Henshaw</Link>
         </motion.h1>
-          {width > 750 ? (
+          {width > 760 ? (
             <Full onOpen={onOpen} colorMode={colorMode} toggleColorMode={toggleColorMode}/>
           )
           :

@@ -34,6 +34,7 @@ export default function About() {
                     <Me />
                     <Heading fontFamily={'bebas neue'} m='2'>{"Hi, I'm Mike!"}</Heading>
                     <Center p={4}>
+
                         <Tooltip hasArrow label="Let's connect on LinkedIn" bg='blue.300' color='black' placement={'top'}>
                             <Link href='https://www.linkedin.com/in/mrhenshaw/' p={2} target={'_blank'}>
                                 <Linkedin fill={text} height={'50px'} width={'50px'} />
@@ -51,6 +52,7 @@ export default function About() {
                                 <Heading fontSize={'4xl'} >CV</Heading>
                             </Link>
                         </Tooltip>
+
                     </Center>
                 </GridItem>
 
