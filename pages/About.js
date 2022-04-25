@@ -21,6 +21,7 @@ export default function About() {
   return (
     <motion.div 
       key='about' 
+      className={styles.max}
       initial={{ x: '-100%'}} 
       animate={{ x: 0, transition: { delay: .5, duration: .75}}} 
       exit={{x: '100%', transition:{ delay: .5, type: 'just'}}}

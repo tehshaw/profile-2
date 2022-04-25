@@ -29,6 +29,14 @@
     color: white;
 }
 
+.navBar{
+    background-color: black;
+    min-height: 69px;
+    padding: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .main{
     background-image: url('../public/max-duzij-qAjJk-un3BI-unsplash.jpg');

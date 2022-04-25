@@ -13,7 +13,7 @@ export default function Main() {
 
   return (
 
-    <Flex flexWrap={'wrap'} justifyContent={'center'} alignItems={'center'} height={'100vh'}>
+    <Flex flexWrap={'wrap'} justifyContent={'center'} alignItems={'center'} className={styles.max}>
 
         <Grid  alignContent={'center'} templateRows={{base: 'auto 25px auto', md: 'auto auto auto'}} gap={8}>
 

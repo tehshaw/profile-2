@@ -31,12 +31,7 @@ export default function NavBar() {
 
   return (
   <>
-    <Flex justifyContent={'space-between'}
-          alignItems={'center'} 
-          p={{base: 3}} bg='black' height={'min-height'}
-          // className={width > 750 ? styles.full : styles.min}
-    >
-          
+    <Flex className={styles.navBar}>
 
       {router.pathname !== '/' && 
       <>
